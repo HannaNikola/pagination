@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-startPage = Math.max(endPage - pagesToShow + 1, 1);
+// startPage = Math.max(endPage - pagesToShow + 1, 1);
 
 const paginationContainer = document.querySelector('.js-pagination');
 
@@ -30,7 +30,7 @@ async function fetchMovies(page) {
 
 function renderMovies() {
   const movieListContainer = document.querySelector('.js-movie-list');
-  movieListContainer.innerHTML = ''; // Clear the previous movie list
+  movieListContainer.innerHTML = ''; 
 
   movieData.forEach(
     ({ poster_path, release_date, original_title, vote_average }) => {
@@ -125,5 +125,5 @@ paginationContainer.addEventListener('click', event => {
   fetchMovies(currentPage);
 });
 
-// Initial load
+
 fetchMovies(currentPage);
