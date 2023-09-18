@@ -43,6 +43,12 @@ body {
 
 
 
+
+
+
+
+
+
 // .posts {
 //     display: flex;
 //     flex-direction: column;
@@ -65,41 +71,59 @@ body {
 //     list-style-type: none;
 // }
 
-// .pagination__item {
-//     padding: 8px;
+//  .pagination__item {
+//      padding: 8px;
 //     margin: 8px;
 //     cursor: pointer;
-// }
+//  }
 
-// .pagination__item--active {
-//     font-weight: 800;
-//     color: gold;
-// }
+//  .pagination__item--active {
+//      font-weight: 800;
+//      color: gold;
+//  }
+
+
+
 /* Center the pagination horizontally and vertically */
-.js-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-   
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
+
+
+.js-pagination {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 64px;
+     gap: 10px;
+   
+ }
 
 
 .js-pagination button {
     
     margin: 0 5px;
+    border-radius: 50%;
+    width:44px;
+    height: 44px;
+    border: 1px solid rgba(5, 5, 5, 0.30);
+    background-color: #ffffff;
    
 }
 
 .js-pagination .js-page.active {
-    background-color: #ff00b7;
+    border: 1px solid transparent;
+    background-color: #9BB537;
     
-    color: white;
+    color: black;
 }
 
 
 
-/* Общие стили для контейнера переключателя */
+/* стили для кнопки darkMoud */
 .toggle-switch {
     position: relative;
     display: inline-block;
@@ -114,7 +138,17 @@ body {
     height: 0;
 }
 
-/* Стили для слайдера (переключателя) */
+
+
+
+
+
+
+
+
+
+
+// /* Стили для слайдера (переключателя) */
 .toggle-switch .slider {
     position: absolute;
     cursor: pointer;
@@ -128,7 +162,7 @@ body {
     border-radius: 34px;
 }
 
-/* Стили для активного (включенного) состояния */
+// // /* Стили для активного (включенного) состояния */
 .toggle-switch input:checked+.slider {
     background-color: #2196F3;
 }

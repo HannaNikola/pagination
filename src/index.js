@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-// startPage = Math.max(endPage - pagesToShow + 1, 1);
+
 
 const paginationContainer = document.querySelector('.js-pagination');
 
@@ -27,6 +27,8 @@ async function fetchMovies(page) {
     console.error(error);
   }
 }
+
+
 
 function renderMovies() {
   const movieListContainer = document.querySelector('.js-movie-list');
@@ -72,6 +74,8 @@ function renderMovies() {
     }
   );
 }
+
+
 
 function updatePagination() {
   paginationContainer.innerHTML = ''; 
@@ -127,3 +131,38 @@ paginationContainer.addEventListener('click', event => {
 
 
 fetchMovies(currentPage);
+
+
+
+
+
+
+
+const body = document.querySelector('body');
+const buttonSwitch = document.querySelector('.toggle-switch');
+ 
+
+
+function changeColor() {
+  buttonSwitch.addEventListener('click', event => {
+    let isDarkMode = true;
+
+    if (isDarkMode) {
+      console.log(isDarkMode);
+      body.style.backgroundColor = '#2f2f37';
+    } else {
+      console.log(!isDarkMode);
+      isDarkMode = false;
+      body.style.backgroundColor = '#ffffff';
+      isDarkMode = !isDarkMode;
+    }
+  });
+}
+changeColor();
+ 
+
+
+
+
+
+
