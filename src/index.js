@@ -23,7 +23,7 @@ async function fetchMovies(page) {
     movieData = response.data.results;
     movieListContainer.innerHTML = '';
     movieListContainer.insertAdjacentHTML('beforeend', renderMovies(movieData));
-    // renderMovies();
+    
     updatePagination();
   } catch (error) {
     console.error(error);
@@ -51,53 +51,6 @@ function renderMovies(arr) {
 }
 
 
-
-
-
-// function renderMovies() {
-//   const movieListContainer = document.querySelector('.js-movie-list');
-//   movieListContainer.innerHTML = '';
-
-//   movieData.forEach(
-//     ({ poster_path, release_date, original_title, vote_average }) => {
-//       const movieItem = document.createElement('li');
-//       movieItem.classList.add('movie-card');
-
-//       const movieImage = document.createElement('img');
-//       movieImage.classList.add('img-movie');
-//       movieImage.src = poster_path
-//         ? `https://image.tmdb.org/t/p/w300${poster_path}`
-//         : 'https://example.com/default-poster.jpg';
-//       movieImage.alt = original_title || 'Unknown Title';
-
-//       const movieInfo = document.createElement('div');
-//       movieInfo.classList.add('movie-info');
-
-//       const titleElement = document.createElement('h2');
-//       titleElement.textContent = original_title || 'Unknown Title';
-
-//       const releaseDateElement = document.createElement('p');
-//       releaseDateElement.textContent = `Release Date: ${
-//         release_date || 'Unknown Date'
-//       }`;
-
-//       const voteAverageElement = document.createElement('p');
-//       voteAverageElement.textContent = `Vote Average: ${
-//         vote_average || 'Unknown Vote'
-//       }`;
-
-//       movieInfo.appendChild(titleElement);
-//       movieInfo.appendChild(releaseDateElement);
-      
-//       movieInfo.appendChild(voteAverageElement);
-
-//       movieItem.appendChild(movieImage);
-//       movieItem.appendChild(movieInfo);
-
-//       movieListContainer.appendChild(movieItem);
-//     }
-//   );
-// }
 
 
 function updatePagination() {
