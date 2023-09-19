@@ -114,7 +114,7 @@ fetchMovies(currentPage);
 
 
 
-
+// dark mode in process
 
 
 const body = document.querySelector('body');
