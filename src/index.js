@@ -21,6 +21,7 @@ async function fetchMovies(page) {
       },
     });
     movieData = response.data.results;
+    movieListContainer.innerHTML = '';
     movieListContainer.insertAdjacentHTML('beforeend', renderMovies(movieData));
     // renderMovies();
     updatePagination();
