@@ -1,4 +1,9 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -43,54 +48,11 @@ body {
 
 
 
-
-
-
-
-
-
-// .posts {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
+// *,
+// *::before,
+// *::after {
+//     box-sizing: border-box;
 // }
-
-// .post {
-//     padding: 8px;
-//     border-color: bisque;
-//     border: 1px;
-// }
-
-// .pagination {
-//     display: flex;
-//     justify-content: center;
-// }
-
-// .pagination__list {
-//     display: flex;
-//     list-style-type: none;
-// }
-
-//  .pagination__item {
-//      padding: 8px;
-//     margin: 8px;
-//     cursor: pointer;
-//  }
-
-//  .pagination__item--active {
-//      font-weight: 800;
-//      color: gold;
-//  }
-
-
-
-/* Center the pagination horizontally and vertically */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
 
 
 .js-pagination {
@@ -137,16 +99,6 @@ body {
     width: 0;
     height: 0;
 }
-
-
-
-
-
-
-
-
-
-
 
 // /* Стили для слайдера (переключателя) */
 .toggle-switch .slider {

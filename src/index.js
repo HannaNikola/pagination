@@ -111,30 +111,7 @@ fetchMovies(currentPage);
 
 
 
-// dark mode in process
 
-
-const body = document.querySelector('body');
-const buttonSwitch = document.querySelector('.toggle-switch');
- 
-
-
-function changeColor() {
-  buttonSwitch.addEventListener('click', event => {
-    let isDarkMode = true;
-
-    if (isDarkMode) {
-      console.log(isDarkMode);
-      body.style.backgroundColor = '#2f2f37';
-    } else {
-      console.log(!isDarkMode);
-      isDarkMode = false;
-      body.style.backgroundColor = '#ffffff';
-      isDarkMode = !isDarkMode;
-    }
-  });
-}
-changeColor();
  
 
 
